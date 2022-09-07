@@ -1,0 +1,20 @@
+# Create a login system with department authentication.
+uname = ['john', 'sam', 'mac', 'peter']
+pwd = {'john':'123', 'sam':'456', 'mac':'789', 'peter':'147'}
+uname = input("Enter your username:").strip().lower()
+dept = {"faculty":["john", "sam"], "student":["mac"], "admin":["peter"]}
+if uname in uname:
+    passw = input("Enter your password:")
+    if passw == pwd[uname]:
+        if uname in dept["faculty"]:
+            print("open faculty portal")
+        if uname in dept["student"]:
+            print("open student portal")
+        if uname in dept["admin"]:
+            print("open admin portal")
+        else:
+            pass
+    else:
+        print("Wrong Password")
+else:
+    print("Wrong Username")
